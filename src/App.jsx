@@ -17,7 +17,6 @@ import './App.css';
 // --- Assets Imports (Move these files to src/assets/) ---
 // Note: You must change the paths below to match where you actually put the files
 import profilePic from './assets/pic.jpg';
-import carImage from './assets/f1-car.svg';
 
 // --- Data ---
 const PROJECTS = [
@@ -51,7 +50,6 @@ const PROJECTS = [
 // Collect all images to preload
 const ASSETS_TO_PRELOAD = [
   profilePic,
-  carImage,
   ...PROJECTS.map(p => p.image)
 ];
 
