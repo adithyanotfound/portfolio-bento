@@ -1,0 +1,22 @@
+@import url('[https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600&display=swap)');
+
+@import "tailwindcss";
+
+:root {
+  --bg-color: #FDFBF7;
+  --card-bg: #F5F2EB;
+  --card-dark: #2C2825;
+  --text-main: #2C2825;
+  --text-light: #FDFBF7;
+  --accent: #A89F91;
+  --border: #E6E1D6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

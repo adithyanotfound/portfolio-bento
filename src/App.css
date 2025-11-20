@@ -1,0 +1,91 @@
+/* --- Fonts --- */
+.font-marcellus {
+  font-family: 'Marcellus', serif;
+}
+
+/* --- Components --- */
+.bento-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(44, 40, 37, 0.08);
+}
+
+.project-image-container {
+  transition: max-height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease-in-out;
+}
+
+/* --- Keyframes --- */
+
+/* 1. Car Animation 
+   Moves from off-screen left (-20vw) to off-screen right (120vw) */
+@keyframes driveAcross {
+  0% {
+    transform: translateX(-20vw); 
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw); 
+    opacity: 1;
+  }
+}
+
+/* 2. Entry Animation 
+   Slide up and Fade in */
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Utilities --- */
+
+/* Applies the entry animation */
+.animate-enter {
+  animation: enter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0; /* Ensures element is hidden before animation starts */
+}
+
+@keyframes greetingFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.greeting-text {
+  animation: none;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0.6;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateX(-6px) translateY(-4px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-12px) translateY(-8px) scale(1.4);
+  }
+}
+
+.smoke-cloud {
+  background: rgba(253, 251, 247, 0.35);
+  filter: blur(8px);
+  border-radius: 9999px;
+  animation: smoke 1s ease-out infinite;
+}
