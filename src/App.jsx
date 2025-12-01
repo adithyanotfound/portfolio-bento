@@ -320,10 +320,10 @@ export default function App() {
                 <h2 className="font-marcellus text-3xl">Contact Me</h2>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8">
-                 <a href="mailto:adithyav102@gmail.com" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Email</a>
-                 <a href="https://linkedin.com/in/adithya102/" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">LinkedIn</a>
-                 <a href="https://github.com/adithyanotfound" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">GitHub</a>
-                 <a href="#" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Twitter</a>
+                 <a href="mailto:adithyav102@gmail.com" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Email</a>
+                 <a href="https://linkedin.com/in/adithya102/" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">LinkedIn</a>
+                 <a href="https://github.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">GitHub</a>
+                 <a href="https://x.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Twitter</a>
               </div>
             </div>
 
