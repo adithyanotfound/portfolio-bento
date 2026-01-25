@@ -12,6 +12,7 @@ import {
   MapPin,
   Coffee
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 // --- Assets Imports (Move these files to src/assets/) ---
@@ -231,6 +232,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full bg-[#FDFBF7] px-4 md:px-8 pb-8">
+      <Analytics />
       
       <div className="max-w-[1400px] mx-auto">
         <Navbar />
