@@ -333,7 +333,7 @@ export default function App() {
                 <a href="mailto:adithyav102@gmail.com" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Email</a>
                 <a href="https://linkedin.com/in/adithya102/" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">LinkedIn</a>
                 <a href="https://github.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">GitHub</a>
-                <a href="https://x.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Twitter</a>
+                <a href="https://leetcode.com/u/adithyav102/" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Leetcode</a>
               </div>
             </div>
 
