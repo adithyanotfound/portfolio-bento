@@ -156,7 +156,7 @@ const Navbar = () => (
       ADITHYA V.
     </div>
     {/* Fixed: used href instead of src, and referencing public file */}
-    <a href="/Adithya_resume_2025.pdf" target="_blank" rel="noopener noreferrer">
+    <a href="/Resume_Adithya_SE.pdf" target="_blank" rel="noopener noreferrer">
       <div className="flex items-center gap-6 md:gap-8">
         <button className="flex items-center gap-2 bg-[#2C2825] text-[#FDFBF7] px-5 py-2 rounded-full text-sm font-medium hover:bg-[#423D38] transition-colors">
           <span>CV</span>
