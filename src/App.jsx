@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowUpRight, 
-  Code2, 
+import {
+  ArrowUpRight,
+  Code2,
   Download,
   Layers,
   Cpu,
@@ -22,15 +22,23 @@ import profilePic from './assets/pic.jpg';
 const PROJECTS = [
   {
     id: 1,
+    title: "Forensiq",
+    category: "Graph Theory, Fintech",
+    image: "/forensiq.png",
+    description: "Scalable graph-based financial forensics engine with 99.97% accuracy",
+    link: "https://forensiq-eta.vercel.app/"
+  },
+  {
+    id: 2,
     title: "KarigarMart",
     category: "E-commerce PWA",
     // These files should be in the 'public' folder
-    image: "/karigar-mart.jpeg", 
+    image: "/karigar-mart.jpeg",
     description: "Reels-based PWA with HLS streaming and Vertex AI ad generation.",
     link: "https://github.com/adithyanotfound/KarigarMart"
   },
   {
-    id: 2,
+    id: 3,
     title: "Investrix",
     category: "Fintech & Blockchain",
     image: "/investrix.jpeg",
@@ -38,7 +46,7 @@ const PROJECTS = [
     link: "https://investrix-v2.vercel.app/"
   },
   {
-    id: 3,
+    id: 4,
     title: "Chatbox",
     category: "Real Time Chat App",
     image: "/chatbox.jpeg",
@@ -123,7 +131,7 @@ const Loader = ({ onComplete }) => {
   const currentGreeting = GREETINGS[currentGreetingIndex];
 
   return (
-    <div 
+    <div
       className={`fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-500 ease-in-out ${!mounted ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
     >
       <div className="flex items-center justify-center text-center px-6">
@@ -159,7 +167,7 @@ const Navbar = () => (
 );
 
 const SidebarProjectItem = ({ project, isActive, onClick }) => (
-  <div 
+  <div
     onClick={() => {
       if (isActive) {
         window.open(project.link, '_blank');
@@ -173,23 +181,23 @@ const SidebarProjectItem = ({ project, isActive, onClick }) => (
       <h3 className={`font-marcellus text-xl transition-colors duration-300 ${isActive ? 'text-[#2C2825]' : 'text-[#6B6661] group-hover:text-[#2C2825]'}`}>
         {project.title}
       </h3>
-      <ArrowUpRight 
-        size={18} 
-        className={`transition-all duration-500 ${isActive ? 'opacity-100 rotate-45 text-[#2C2825]' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-[#6B6661]'}`} 
+      <ArrowUpRight
+        size={18}
+        className={`transition-all duration-500 ${isActive ? 'opacity-100 rotate-45 text-[#2C2825]' : 'opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-[#6B6661]'}`}
       />
     </div>
-    
+
     <div className={`project-image-container overflow-hidden ${isActive ? 'max-h-80 opacity-100 mb-4' : 'max-h-0 opacity-0'}`}>
-      <img 
-        src={project.image} 
-        alt={project.title} 
+      <img
+        src={project.image}
+        alt={project.title}
         className="w-full h-auto max-h-60 object-cover object-center rounded-xl shadow-sm mb-3"
       />
       <p className="text-sm text-[#6B6661] leading-relaxed">
         {project.description}
       </p>
     </div>
-    
+
     <div className="flex justify-between items-center">
       <p className={`text-xs uppercase tracking-wider transition-colors ${isActive ? 'text-[#2C2825]' : 'text-[#A89F91]'}`}>
         {project.category}
@@ -219,7 +227,7 @@ const TechBadge = ({ label }) => (
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [activeProject, setActiveProject] = useState(1); 
+  const [activeProject, setActiveProject] = useState(1);
 
   if (loading) {
     return (
@@ -231,15 +239,15 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full bg-[#FDFBF7] px-4 md:px-8 pb-8">
-      
+
       <div className="max-w-[1400px] mx-auto">
         <Navbar />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
-          
+
           {/* LEFT COLUMN */}
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-min">
-            
+
             {/* Row 1 */}
             <div className="md:col-span-1 bg-[#EBE7DE] rounded-3xl p-8 flex flex-col justify-between min-h-[320px] relative overflow-hidden bento-card animate-enter" style={{ animationDelay: '0.1s' }}>
               <div className="absolute top-6 right-6 opacity-20 animate-[spin_10s_linear_infinite]">
@@ -258,22 +266,22 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-8">
-                 <p className="text-sm text-[#6B6661] max-w-[90%] leading-relaxed">
-                   Building web apps with React, Node.js, & AWS. Delivered systems processing 10k+ daily transactions.
-                 </p>
+                <p className="text-sm text-[#6B6661] max-w-[90%] leading-relaxed">
+                  Building web apps with React, Node.js, & AWS. Delivered systems processing 10k+ daily transactions.
+                </p>
               </div>
             </div>
 
             <div className="md:col-span-1 rounded-3xl overflow-hidden relative group h-[320px] bento-card animate-enter" style={{ animationDelay: '0.2s' }}>
-              <img 
-                src={profilePic} 
-                alt="Profile" 
+              <img
+                src={profilePic}
+                alt="Profile"
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                 <span className="bg-white/90 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm flex items-center gap-2">
-                   <MapPin size={12} /> New Delhi, India
-                 </span>
+                <span className="bg-white/90 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm flex items-center gap-2">
+                  <MapPin size={12} /> New Delhi, India
+                </span>
               </div>
             </div>
 
@@ -306,12 +314,12 @@ export default function App() {
 
             {/* Row 3 */}
             <div className="md:col-span-1 bg-[#EBE7DE] rounded-3xl p-6 bento-card animate-enter" style={{ animationDelay: '0.4s' }}>
-               <h3 className="font-marcellus text-xl mb-4 text-[#2C2825]">Tech Stack</h3>
-               <div className="flex flex-wrap gap-2 content-start">
-                 {['JavaScript', 'TypeScript', 'Python', 'React', 'Next.js', 'Node.js', 'Express', 'AWS', 'OCI', 'Docker', 'Kubernetes', 'PostgreSQL', 'MongoDB', 'Kafka', 'Redis', 'Git', 'Testing', 'GenAI'].map(tech => (
-                   <TechBadge key={tech} label={tech} />
-                 ))}
-               </div>
+              <h3 className="font-marcellus text-xl mb-4 text-[#2C2825]">Tech Stack</h3>
+              <div className="flex flex-wrap gap-2 content-start">
+                {['JavaScript', 'TypeScript', 'Python', 'React', 'Next.js', 'Node.js', 'Express', 'AWS', 'OCI', 'Docker', 'Kubernetes', 'PostgreSQL', 'MongoDB', 'Kafka', 'Redis', 'Git', 'Testing', 'GenAI'].map(tech => (
+                  <TechBadge key={tech} label={tech} />
+                ))}
+              </div>
             </div>
 
             <div className="md:col-span-1 bg-[#2C2825] text-[#FDFBF7] rounded-3xl p-8 flex flex-col justify-between bento-card animate-enter" style={{ animationDelay: '0.45s' }}>
@@ -320,10 +328,10 @@ export default function App() {
                 <h2 className="font-marcellus text-3xl">Contact Me</h2>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8">
-                 <a href="mailto:adithyav102@gmail.com" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Email</a>
-                 <a href="https://linkedin.com/in/adithya102/" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">LinkedIn</a>
-                 <a href="https://github.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">GitHub</a>
-                 <a href="https://x.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Twitter</a>
+                <a href="mailto:adithyav102@gmail.com" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Email</a>
+                <a href="https://linkedin.com/in/adithya102/" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">LinkedIn</a>
+                <a href="https://github.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">GitHub</a>
+                <a href="https://x.com/adithyanotfound" target="_blank" rel="noopener noreferrer" className="text-xs font-medium tracking-widest uppercase hover:text-[#A89F91] transition-colors text-right">Twitter</a>
               </div>
             </div>
 
@@ -332,15 +340,15 @@ export default function App() {
           {/* RIGHT COLUMN */}
           <div className="lg:col-span-4 bg-white border border-[#E6E1D6] rounded-3xl p-6 h-full min-h-[600px] flex flex-col bento-card animate-enter" style={{ animationDelay: '0.5s' }}>
             <div className="flex justify-between items-baseline mb-6 border-b border-[#2C2825]/10 pb-4">
-               <h2 className="font-marcellus text-2xl">Selected Works</h2>
-               <span className="text-xs font-mono opacity-50">03</span>
+              <h2 className="font-marcellus text-2xl">Selected Works</h2>
+              <span className="text-xs font-mono opacity-50">04</span>
             </div>
-            
+
             <div className="flex-1 flex flex-col gap-2">
               {PROJECTS.map((project) => (
-                <SidebarProjectItem 
-                  key={project.id} 
-                  project={project} 
+                <SidebarProjectItem
+                  key={project.id}
+                  project={project}
                   isActive={activeProject === project.id}
                   onClick={() => setActiveProject(project.id)}
                 />
